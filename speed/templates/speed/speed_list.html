@@ -1,0 +1,11 @@
+{% extends 'speed/base.html' %}
+
+{% block content %}
+    {% for speed in speeds %}
+        <div>
+            <p>Server Name: {{ speed.ServerName }}, Timestamp: {{ speed.Timestamp }},Distance: {{ speed.Distance }},
+                Ping {{ speed.Ping }},Download {{ speed.Download }},Upload {{ speed.Upload }}</p>
+            <p>{{ speed.ServerName |linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

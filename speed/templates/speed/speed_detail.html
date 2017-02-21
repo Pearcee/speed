@@ -1,0 +1,14 @@
+{% extends 'speed/base.html' %}
+
+{% block content %}
+    <div class="speed">
+        {% if speed.Timestamp %}
+            <div class="date">
+                {{ speed.Timestamp }}
+            </div>
+        {% endif %}
+        <a class="btn btn-default" href="{% url 'speed_edit' pk=speed.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <h1>{{ speed.ServerName }}</h1>
+        <p>{{ speed.ServerName|linebreaksbr }}</p>
+    </div>
+{% endblock %}
